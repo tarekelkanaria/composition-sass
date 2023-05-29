@@ -1,6 +1,7 @@
 @use "../helpers/placeholders" as *;
 @use "../helpers/varaibles" as *;
 
+// Services section style
 .services {
   @extend %boxesSection;
 
@@ -16,6 +17,7 @@
   }
 }
 
+// Our players section style
 .our-players {
   @extend %boxesSection;
   .our-players__box {
@@ -34,6 +36,7 @@
   }
 }
 
+// Lorem ipsum section style
 .lorem-ipsum {
   @extend %boxesSection;
   .lorem-ipsum__box {
