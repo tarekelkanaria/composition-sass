@@ -33,3 +33,12 @@
     }
   }
 }
+
+.lorem-ipsum {
+  @extend %boxesSection;
+  .lorem-ipsum__box {
+    img {
+      max-width: 100%;
+    }
+  }
+}
