@@ -1,0 +1,46 @@
+@use "./varaibles" as *;
+@use "./mixins" as *;
+
+%mainContainer {
+  width: 85%;
+  margin: auto;
+}
+
+%flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+%flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%boxesSection {
+  @extend %flexBetween;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+%titleID {
+  color: $blackColor;
+  @include lang_direction($langDir, 0.5rem);
+}
+%itemBox {
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    color: #666;
+  }
+
+  p {
+    color: $textColor;
+    margin-bottom: 1em;
+    line-height: 1.5;
+  }
+  a {
+    text-decoration: none;
+    color: $mainColor;
+  }
+}

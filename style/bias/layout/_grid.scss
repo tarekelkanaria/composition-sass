@@ -1,0 +1,5 @@
+@use "../helpers/placeholders" as *;
+
+.container {
+  @extend %mainContainer;
+}

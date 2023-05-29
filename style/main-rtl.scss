@@ -1,0 +1,20 @@
+@use "./bias/helpers/mixins" as *;
+/// Change language direction
+$langDir: rtl;
+
+// header styles
+.header-wrapper {
+  @include lang_direction($langDir);
+}
+.head__nav {
+  @include lang_direction($langDir);
+}
+.services {
+  .service__box {
+    h3 {
+      i {
+        @include lang_direction($langDir, 0.5rem);
+      }
+    }
+  }
+}

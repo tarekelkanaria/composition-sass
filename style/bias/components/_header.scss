@@ -1,0 +1,45 @@
+@use "../helpers/varaibles" as *;
+@use "../helpers/placeholders" as *;
+@use "../helpers/mixins" as *;
+
+.header-section {
+  margin-bottom: 2rem;
+}
+.header-wrapper {
+  display: flex;
+  @include lang_direction($langDir);
+  padding: 2rem 0;
+  font-size: 1.4rem;
+  gap: 1rem;
+  border-bottom: 2px solid $textColor;
+}
+.head__logo {
+  flex-basis: 30%;
+  h1 {
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+  p {
+    color: $textColor;
+  }
+}
+.head__nav {
+  flex-basis: 70%;
+  background-color: $mainColor;
+  border-radius: 1.5rem;
+  font-size: 1.8rem;
+  @extend %flexAround;
+  @include lang_direction($langDir);
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 1.11em 0.55em;
+    color: $whiteColor;
+    transition: all 0.2s linear;
+    text-transform: uppercase;
+    &:hover {
+      color: $bulletColor;
+    }
+  }
+}

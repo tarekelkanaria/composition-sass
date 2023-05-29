@@ -1,0 +1,35 @@
+@use "../helpers/placeholders" as *;
+@use "../helpers/varaibles" as *;
+
+.services {
+  @extend %boxesSection;
+
+  .service__box {
+    @extend %itemBox;
+    h3 {
+      i {
+        @extend %titleID;
+        position: relative;
+        top: 0.2em;
+      }
+    }
+  }
+}
+
+.our-players {
+  @extend %boxesSection;
+  .our-players__box {
+    @extend %itemBox;
+    img {
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-weight: normal;
+      span {
+        @extend %titleID;
+        font-weight: bold;
+        color: $textColor;
+      }
+    }
+  }
+}

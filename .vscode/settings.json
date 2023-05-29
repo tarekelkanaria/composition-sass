@@ -1,0 +1,14 @@
+{
+  "liveSassCompile.settings.useNewCompiler": true,
+  "liveSassCompile.settings.autoprefix": ["cover 99.5%", "last 2 versions"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": null,
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**"]
+}
