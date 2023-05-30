@@ -47,6 +47,17 @@
 /// @return {css}
 /// the propriate styles for specified direction
 ///
+@mixin change_text-direction($direction) {
+  text-align: $direction;
+}
+@mixin change_padding($dir, $padding) {
+  @if $dir == ltr {
+    padding-right: $padding;
+  } @else {
+    padding-right: 0;
+    padding-left: $padding;
+  }
+}
 @mixin lang_direction($dir, $margin: null) {
   flex-direction: row#{if($dir == rtl, #{-reverse}, null)};
   text-align: #{if($dir == rtl, right, left)};

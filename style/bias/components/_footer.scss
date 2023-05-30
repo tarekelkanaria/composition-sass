@@ -1,0 +1,101 @@
+@use "../helpers/varaibles" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholders" as *;
+
+.page-footer {
+  background-color: $footerBackground;
+  padding-block: 3rem;
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    @include lang_direction($langDir);
+    .gallery {
+      flex: 1.7 44%;
+    }
+    article:not(:first-of-type) {
+      flex: 1.3 28%;
+    }
+  }
+  .footer__subtitle {
+    color: $textHeaderColor;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+  .gallery__item {
+    display: flex;
+    justify-content: space-between;
+    @include lang_direction($langDir);
+    margin-bottom: 4rem;
+    .item__poster {
+      width: 34%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .item__text {
+      width: 64%;
+      h4 {
+        color: $mainColor;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: $textColor;
+      }
+    }
+  }
+
+  .details {
+    color: $textColor;
+    line-height: 1.5;
+    .company__details {
+      margin-bottom: 1rem;
+      @include change_padding($langDir, 1rem);
+    }
+    address {
+      margin-bottom: 1rem;
+      @include change_padding($langDir, 1rem);
+      p:last-of-type a {
+        color: $mainColor;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+    .work__details {
+      @include change_padding($langDir, 1rem);
+      h4 {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .contact form > * {
+    width: 100%;
+    margin-bottom: 1rem;
+    input,
+    textarea {
+      width: 100%;
+      border: none;
+      border: 1px solid $textColor;
+      border-radius: 0.8rem;
+      padding: 1.5rem 1rem;
+      &:focus {
+        outline: none;
+      }
+    }
+    textarea {
+      height: 10rem;
+    }
+  }
+  .copyright {
+    @extend %flexBetween;
+    @include lang_direction($langDir);
+    padding-top: 2.5rem;
+    color: $textColor;
+    border-top: 1px solid $footerBorder;
+    p:last-of-type {
+      @include change_text-direction($textRight);
+    }
+  }
+}

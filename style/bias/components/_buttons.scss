@@ -1,0 +1,16 @@
+@use "../helpers/varaibles" as *;
+.main-btn {
+  background-color: rgba($mainColor, 0.8);
+  border: none;
+  color: $whiteColor;
+  padding: 1rem 1.5rem;
+  min-width: 12rem;
+  font-weight: bold;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: $mainColor;
+  }
+}
