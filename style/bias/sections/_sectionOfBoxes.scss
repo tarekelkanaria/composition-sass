@@ -1,10 +1,11 @@
 @use "../helpers/placeholders" as *;
 @use "../helpers/varaibles" as *;
+@use "../helpers/mixins" as *;
 
 // Services section style
 .services {
   @extend %boxesSection;
-
+  @extend %threeBoxesMedia;
   .service__box {
     @extend %itemBox;
     h3 {
@@ -14,16 +15,34 @@
         top: 0.2em;
       }
     }
+    @extend %boxOfThreeMedia;
+    @include media($smallScreen) {
+      h3 {
+        i {
+          margin-bottom: 0.4em;
+        }
+      }
+    }
   }
 }
 
 // Our players section style
 .our-players {
   @extend %boxesSection;
+  @include media($largeScreen) {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  @include media($extraSmall) {
+    flex-wrap: unset;
+    flex-direction: column;
+  }
   .our-players__box {
     @extend %itemBox;
     img {
       margin-bottom: 1rem;
+      max-width: 100%;
     }
     h3 {
       font-weight: normal;
@@ -33,13 +52,28 @@
         color: $textColor;
       }
     }
+    @include media($largeScreen) {
+      max-width: 24%;
+    }
+    @include media($mediumScreen) {
+      max-width: 32%;
+    }
+    @include media($smallScreen) {
+      max-width: 48%;
+    }
+    @include media($extraSmall) {
+      max-width: unset;
+      text-align: center;
+    }
   }
 }
 
 // Lorem ipsum section style
 .lorem-ipsum {
   @extend %boxesSection;
+  @extend %threeBoxesMedia;
   .lorem-ipsum__box {
+    @extend %boxOfThreeMedia;
     img {
       max-width: 100%;
     }

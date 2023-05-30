@@ -11,10 +11,10 @@ $footerBorder: #c5c5c5;
 
 // Screens
 $extraSmall: "(max-width: 575px)";
-$smallScreen: "(min-width: 576px) and (max-width: 767px)";
-$mediumScreen: "(min-width: 768px) and (max-width: 991px)";
-$largeScreen: "(min-width: 992px) and (max-width: 1199px)";
-$extraLarge: "(min-width: 1200px) and (max-width: 1399px)";
+$smallScreen: "(max-width: 767px)";
+$mediumScreen: "(max-width: 991px)";
+$largeScreen: "(max-width: 1199px)";
+$extraLarge: "(max-width: 1399px)";
 $extraExtraLarge: "(min-width: 1400px)";
 
 // language

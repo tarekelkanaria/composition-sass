@@ -4,11 +4,9 @@
 /// @return {css}
 /// specified media screens for the element
 ///
-@mixin media($screens...) {
-  @each $screen in $screens {
-    @media #{$screen} {
-      @content;
-    }
+@mixin media($screen) {
+  @media #{$screen} {
+    @content;
   }
 }
 
