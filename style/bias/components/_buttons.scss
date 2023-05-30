@@ -21,7 +21,7 @@
   background-color: rgba($mainColor, 0.8);
   display: none;
   width: fit-content;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 0.8rem;
   cursor: pointer;
   i {
@@ -29,9 +29,6 @@
   }
   &:hover {
     background-color: $mainColor;
-    + .head__nav {
-      display: block;
-    }
   }
   @include media($smallScreen) {
     display: block;
