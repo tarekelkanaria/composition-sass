@@ -1,4 +1,5 @@
 @use "../helpers/varaibles" as *;
+@use "../helpers/mixins" as *;
 
 .main-heading {
   position: relative;
@@ -12,6 +13,9 @@
     color: $whiteColor;
     border-radius: 1.5rem;
     max-width: 30rem;
+    @include media($extraSmall) {
+      word-break: break-word;
+    }
     &::before {
       content: "";
       width: 100%;

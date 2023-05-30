@@ -41,6 +41,9 @@
   }
   @include media($extraSmall) {
     font-size: 1rem;
+    h1 {
+      word-break: break-word;
+    }
   }
 }
 .head__nav {

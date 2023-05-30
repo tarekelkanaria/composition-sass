@@ -74,6 +74,9 @@
       }
       .item__text {
         text-align: center;
+        p {
+          word-break: break-word;
+        }
       }
     }
   }
@@ -84,6 +87,10 @@
     .company__details {
       margin-bottom: 1rem;
       @include change_padding($langDir, 1rem);
+      @include media($extraSmall) {
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+      }
     }
     address {
       margin-bottom: 1rem;
@@ -92,6 +99,11 @@
         color: $mainColor;
         font-weight: bold;
         text-decoration: none;
+        word-break: break-word;
+      }
+      @include media($extraSmall) {
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
       }
     }
     .work__details {
@@ -99,6 +111,10 @@
       h4 {
         font-weight: bold;
         margin-bottom: 1rem;
+      }
+      @include media($extraSmall) {
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
       }
     }
   }
