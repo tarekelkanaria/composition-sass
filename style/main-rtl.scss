@@ -4,12 +4,6 @@
 $langDir: rtl;
 
 // header styles
-.header-wrapper {
-  @include lang_direction($langDir);
-}
-.head__nav {
-  @include lang_direction($langDir);
-}
 .services {
   .service__box {
     h3 {
@@ -19,28 +13,12 @@ $langDir: rtl;
     }
   }
 }
-.page-footer {
-  .container {
-    @include lang_direction($langDir);
-  }
-  .gallery__item {
-    @include lang_direction($langDir);
-  }
-  .details {
-    .company__details {
-      @include change_padding($langDir, 1rem);
-    }
-    address {
-      @include change_padding($langDir, 1rem);
-    }
-    .work__details {
-      @include change_padding($langDir, 1rem);
-    }
-  }
-  .copyright {
-    @include lang_direction($langDir);
-    p:last-of-type {
-      @include change_text-direction($textLeft);
+.our-players {
+  .our-players__box {
+    h3 {
+      span {
+        @include lang_direction($langDir, 0.5rem);
+      }
     }
   }
 }

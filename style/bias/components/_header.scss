@@ -6,8 +6,7 @@
   margin-bottom: 2rem;
 }
 .header-wrapper {
-  display: flex;
-  @include lang_direction($langDir);
+  @extend %flexBetween;
   padding: 2rem 0;
   font-size: 1.4rem;
   gap: 1rem;
@@ -52,7 +51,6 @@
   border-radius: 1.5rem;
   font-size: 1.8rem;
   @extend %flexAround;
-  @include lang_direction($langDir);
   a {
     text-decoration: none;
     display: block;

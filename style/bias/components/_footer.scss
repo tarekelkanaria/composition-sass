@@ -10,7 +10,6 @@
     justify-content: space-between;
     gap: 1rem;
     padding-block: 1rem;
-    @include lang_direction($langDir);
     .gallery {
       flex: 1.7 44%;
     }
@@ -46,7 +45,6 @@
   .gallery__item {
     display: flex;
     justify-content: space-between;
-    @include lang_direction($langDir);
     margin-bottom: 4rem;
     .item__poster {
       width: 34%;
@@ -86,7 +84,6 @@
     line-height: 1.5;
     .company__details {
       margin-bottom: 1rem;
-      @include change_padding($langDir, 1rem);
       @include media($extraSmall) {
         padding-right: 0.2rem;
         padding-left: 0.2rem;
@@ -94,7 +91,6 @@
     }
     address {
       margin-bottom: 1rem;
-      @include change_padding($langDir, 1rem);
       p:last-of-type a {
         color: $mainColor;
         font-weight: bold;
@@ -107,7 +103,6 @@
       }
     }
     .work__details {
-      @include change_padding($langDir, 1rem);
       h4 {
         font-weight: bold;
         margin-bottom: 1rem;
@@ -141,19 +136,15 @@
   }
   .copyright {
     @extend %flexBetween;
-    @include lang_direction($langDir);
     padding-top: 2.5rem;
     color: $textColor;
     border-top: 1px solid $footerBorder;
     p:last-of-type {
-      @include change_text-direction($textRight);
+      text-align: right;
     }
-    @include media($extraSmall) {
+    @include media($largeScreen) {
       flex-direction: column;
       text-align: center;
-      p:last-of-type {
-        text-align: center;
-      }
     }
   }
 }
